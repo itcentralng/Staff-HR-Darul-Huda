@@ -4,14 +4,15 @@ import Header from '../components/Header';
 import InputField from '../components/InputField';
 import LoginButton from '../components/LoginButton';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    console.log('Username:', username);
-    console.log('Password:', password);
-  };
+
+    const handleLogin = () => {
+   
+      navigation.navigate('Dashboard');
+    };
 
   return (
     <View style={styles.container}>
