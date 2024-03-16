@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, SafeAreaView } from 'react-native';
 
 const RequestLeaveScreen = () => {
   const [leaveType, setLeaveType] = useState('');
@@ -11,6 +11,7 @@ const RequestLeaveScreen = () => {
   };
 
   return (
+    <SafeAreaView>
     <View style={styles.container}>
       <Text style={styles.title}>Request Leave</Text>
       <TextInput
@@ -41,6 +42,7 @@ const RequestLeaveScreen = () => {
       <Button title="Attach File" onPress={() => {}} />
       <Button title="Submit Request" onPress={handleRequestLeave} style={styles.attach} />
     </View>
+    </SafeAreaView>
   );
 };
 

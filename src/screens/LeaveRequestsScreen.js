@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 
 const LeaveRequestsScreen = () => {
   const leaveRequests = [
@@ -8,6 +8,7 @@ const LeaveRequestsScreen = () => {
   ];
 
   return (
+    <SafeAreaView>
     <View style={styles.container}>
       <Text style={styles.title}>Leave Requests</Text>
       {leaveRequests.map(request => (
@@ -26,6 +27,7 @@ const LeaveRequestsScreen = () => {
         </View>
       ))}
     </View>
+    </SafeAreaView>
   );
 };
 

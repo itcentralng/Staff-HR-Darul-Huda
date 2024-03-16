@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 
 const LeaveRequestDetailsScreen = ({ route }) => {
   const requestDetails = {
@@ -12,6 +12,7 @@ const LeaveRequestDetailsScreen = ({ route }) => {
   };
 
   return (
+    <SafeAreaView>
     <View style={styles.container}>
       <Text style={styles.title}>Leave Request Details</Text>
       <View style={styles.detailContainer}>
@@ -39,6 +40,7 @@ const LeaveRequestDetailsScreen = ({ route }) => {
         <Text style={styles.detail}>{requestDetails.reason}</Text>
       </View>
     </View>
+    </SafeAreaView>
   );
 };
 

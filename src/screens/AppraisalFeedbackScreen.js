@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, Button, SafeAreaView } from 'react-native';
 
 const AppraisalFeedbackScreen = () => {
   const handleSubmitFeedback = () => {
@@ -7,6 +7,7 @@ const AppraisalFeedbackScreen = () => {
   };
 
   return (
+    <SafeAreaView>
     <View style={{ flex: 1, padding: 20, paddingTop: 40 }}>
       <Text style={{ fontSize: 20, marginBottom: 10 }}>Appraisal Feedback</Text>
       <TextInput
@@ -16,6 +17,7 @@ const AppraisalFeedbackScreen = () => {
       />
       <Button title="Submit Feedback" onPress={handleSubmitFeedback} />
     </View>
+    </SafeAreaView>
   );
 };
 
