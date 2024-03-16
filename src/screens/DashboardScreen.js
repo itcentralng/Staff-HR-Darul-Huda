@@ -15,10 +15,9 @@ const DashboardScreen = ({ navigation }) => {
     { id: 2, type: 'Event', startDate: '2024-03-18', endDate: '2024-03-22' },
   ];
 
-  const handleLogout = () => {
-    // Navigate to the 'Dashboard' tab
-    navigation.navigate('Main', { screen: 'Login' });
-  };
+  handleLogout = () => {
+    navigation.navigate('Login')
+  }
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
