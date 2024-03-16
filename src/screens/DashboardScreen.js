@@ -15,14 +15,21 @@ const DashboardScreen = ({ navigation }) => {
     { id: 2, type: 'Event', startDate: '2024-03-18', endDate: '2024-03-22' },
   ];
 
-  handleLogout = () => {
-    navigation.navigate('Login')
-  }
+  const handleLogout = () => {
+    // Navigate to the 'Dashboard' tab
+    navigation.navigate('Main', { screen: 'Login' });
+  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.heading}>Dashboard</Text>
-      <Text style={styles.welcomeName}>Welcom Back, Mr Bashir!</Text>
+      <View style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between"}}>
+        <View>
+        <Text style={styles.heading}>Dashboard</Text>
+        <Text style={styles.welcomeName}>Welcom Back, Mr Bashir!</Text>
+        </View>
+        <LogoutButton onPress={handleLogout} />
+      </View>
+
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Recent Documents</Text>
@@ -44,7 +51,6 @@ const DashboardScreen = ({ navigation }) => {
         ))}
       </View>
 
-      <LogoutButton onPress={handleLogout} />
     </ScrollView>
   );
 };
@@ -58,12 +64,10 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: "navy"
   },
   welcomeName: {
     fontSize: 14,
     marginBottom: 20,
-    color: "navy"
   },
   section: {
     marginBottom: 20,

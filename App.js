@@ -23,6 +23,7 @@ const LeaveManagementStack = () => (
     <Stack.Screen name="RequestLeave" component={RequestLeaveScreen} options={{ headerShown: false }} />
     <Stack.Screen name="LeaveRequests" component={LeaveRequestsScreen} options={{ headerShown: false }} />
     <Stack.Screen name="LeaveRequestDetails" component={LeaveRequestDetailsScreen} options={{ headerShown: false }} />
+    <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
   </Stack.Navigator>
 );
 
