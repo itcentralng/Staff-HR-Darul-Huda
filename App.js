@@ -59,7 +59,7 @@ const App = () => {
       >
         <Tab.Screen name="Dashboard" component={DashboardScreen} options={{ headerShown: false }} />
         <Tab.Screen name="Receive Documents" component={ReceiveDocumentsScreen} options={{ headerShown: false }} />
-        <Tab.Screen name="Upload Document" component={UploadDocumentScreen} options={{ headerShow: false }} />
+        <Tab.Screen name="Upload Document" component={UploadDocumentScreen} options={{ headerShown: false }} />
         <Tab.Screen name="Appraisal Feedback" component={AppraisalFeedbackScreen} options={{ headerShown: false }} />
         <Tab.Screen name="Leave Management" component={LeaveManagementStack} options={{ headerShown: false }} />
         <Tab.Screen name="Profile" component={StaffProfileScreen} options={{ headerShown: false }} />
