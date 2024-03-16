@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 
 const UploadDocumentScreen = () => {
@@ -20,7 +20,6 @@ const UploadDocumentScreen = () => {
   };
 
   return (
-    <SafeAreaView>
     <View style={styles.container}>
       <Text style={styles.heading}>Upload Document</Text>
 
@@ -51,7 +50,6 @@ const UploadDocumentScreen = () => {
         <Text style={styles.uploadButtonText}>Upload</Text>
       </TouchableOpacity>
     </View>
-    </SafeAreaView>
   );
 };
 

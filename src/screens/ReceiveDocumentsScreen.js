@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
 const ReceiveDocumentsScreen = () => {
 
@@ -11,7 +11,6 @@ const ReceiveDocumentsScreen = () => {
   ];
 
   return (
-    <SafeAreaView>
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.heading}>Received Documents</Text>
 
@@ -23,7 +22,6 @@ const ReceiveDocumentsScreen = () => {
         </TouchableOpacity>
       ))}
     </ScrollView>
-    </SafeAreaView>
   );
 };
 

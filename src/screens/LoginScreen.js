@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, SafeAreaView } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Header from '../components/Header';
 import InputField from '../components/InputField';
 import LoginButton from '../components/LoginButton';
@@ -19,7 +19,6 @@ const LoginScreen = ({ navigation }) => {
   
 
   return (
-    <SafeAreaView>
     <View style={styles.container}>
       <Header />
       <InputField
@@ -33,7 +32,6 @@ const LoginScreen = ({ navigation }) => {
       />
       <LoginButton onPress={handleLogin} />
     </View>
-    </SafeAreaView>
   );
 };
 

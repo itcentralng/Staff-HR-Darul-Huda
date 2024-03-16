@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import LogoutButton from '../components/LogoutButton';
 import LoginScreen from './LoginScreen';
 
@@ -20,7 +20,6 @@ const DashboardScreen = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView>
     <ScrollView contentContainerStyle={styles.container}>
       <View style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between"}}>
         <View>
@@ -52,7 +51,6 @@ const DashboardScreen = ({ navigation }) => {
       </View>
 
     </ScrollView>
-    </SafeAreaView>
   );
 };
 

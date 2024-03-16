@@ -1,7 +1,7 @@
 // StaffProfileScreen.js
 
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 const StaffProfileScreen = () => {
   const [staffInfo, setStaffInfo] = useState({
@@ -32,7 +32,6 @@ const StaffProfileScreen = () => {
   };
 
   return (
-    <SafeAreaView>
     <View style={styles.container}>
       <Text style={styles.heading}>Sayyid Bashir</Text>
       <View style={styles.infoContainer}>
@@ -58,7 +57,6 @@ const StaffProfileScreen = () => {
       
       <Button title="Edit Profile" onPress={handleProfileUpdate} />
     </View>
-    </SafeAreaView>
   );
 };
 
