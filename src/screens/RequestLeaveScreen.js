@@ -62,7 +62,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 10,
     paddingHorizontal: 10,
-    textAlignVertical: "top" 
+    paddingTop: 10,
+    textAlignVertical: "top" ,
+    borderRadius: 8
   },
   attach: {
     marginTop: 20
