@@ -29,13 +29,15 @@ const LoginScreen = ({ navigation }) => {
 />
       <Header />
       <InputField
-        placeholder="Username"
+        placeholder="Email Address"
         onChangeText={(text) => setUsername(text)}
+        iconName="user"
       />
       <InputField
         placeholder="Password"
         secureTextEntry={true}
         onChangeText={(text) => setPassword(text)}
+        iconName="lock"
       />
       <LoginButton onPress={handleLogin} />
     </View>
@@ -57,7 +59,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: -30,
     left: -30,
-    zIndex: 100
   },
   imageBottom: {
     width: 200,
@@ -67,7 +68,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: -50,
     right: -50,
-    zIndex: 100
   },
 });
 
