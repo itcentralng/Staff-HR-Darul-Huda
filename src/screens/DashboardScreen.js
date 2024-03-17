@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import LogoutButton from '../components/LogoutButton';
 import LoginScreen from './LoginScreen';
 
@@ -21,12 +21,12 @@ const DashboardScreen = ({ navigation }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <View style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between"}}>
+      <View style={{ display: "flex", flexDirection: "row", alignItems: "flex-start"}}>
+        <Image source={{ uri: 'https://csn-prod-profile-images.s3.amazonaws.com/ZcP4ZzB_br7KGkIYA7HBS' }} style={styles.profilePicture} />
         <View>
         <Text style={styles.heading}>Dashboard</Text>
         <Text style={styles.welcomeName}>Welcom Back, Mr Bashir!</Text>
         </View>
-        <LogoutButton onPress={handleLogout} />
       </View>
 
 
@@ -66,12 +66,20 @@ const styles = StyleSheet.create({
     // fontWeight: 'bold',
     fontFamily: 'Lato-Bold'
   },
+  profilePicture: {
+    width: 50,
+    height: 50,
+    borderRadius: 8,
+    marginBottom: 20,
+    marginRight: 10
+  },
   welcomeName: {
     fontSize: 14,
     marginBottom: 20,
     fontFamily: 'Lato-Regular'
 
   },
+  
   section: {
     marginBottom: 20,
   },
