@@ -18,12 +18,16 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontFamily: 'Lato-Bold',
-    color: "navy"
+    color: "navy",
+    zIndex: 2,
+    textAlign: "center"
   },
   titleSlogan: {
     fontSize: 18,
-    color: "black",
-    fontFamily: 'Lato-Regular'
+    color: "gray",
+    fontFamily: 'Lato-Regular',
+    zIndex: 2,
+    textAlign: "center"
   },
 });
 
