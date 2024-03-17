@@ -1,5 +1,3 @@
-// StaffProfileScreen.js
-
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Image, Button, StyleSheet } from 'react-native';
 
@@ -75,7 +73,7 @@ const styles = StyleSheet.create({
   profilePicture: {
     width: 200,
     height: 200,
-    borderRadius: 8, // to make it circular
+    borderRadius: 8,
     marginBottom: 20,
   },
   heading: {
