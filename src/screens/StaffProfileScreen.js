@@ -1,9 +1,10 @@
 // StaffProfileScreen.js
 
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Image, Button, StyleSheet } from 'react-native';
 
 const StaffProfileScreen = () => {
+  const [profilePicture, setProfilePicture] = useState(null)
   const [staffInfo, setStaffInfo] = useState({
     name: '',
     email: '',
@@ -21,6 +22,8 @@ const StaffProfileScreen = () => {
       subjects: 'Arabic, Nahwu and Hadith',
       contactNumber: '081 56848384',
     });
+
+    setProfilePicture('https://csn-prod-profile-images.s3.amazonaws.com/ZcP4ZzB_br7KGkIYA7HBS')
   };
 
   useEffect(() => {
@@ -33,6 +36,7 @@ const StaffProfileScreen = () => {
 
   return (
     <View style={styles.container}>
+      <Image source={{ uri: profilePicture }} style={styles.profilePicture} />
       <Text style={styles.heading}>Sayyid Bashir</Text>
       <View style={styles.infoContainer}>
         <Text style={styles.label}>Name:</Text>
@@ -67,6 +71,12 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     paddingHorizontal: 20,
     paddingTop: 40
+  },
+  profilePicture: {
+    width: 200,
+    height: 200,
+    borderRadius: 8, // to make it circular
+    marginBottom: 20,
   },
   heading: {
     fontSize: 24,
