@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: 'Lato-Bold',
     marginBottom: 20,
   },
   requestContainer: {

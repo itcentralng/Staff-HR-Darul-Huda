@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold',
     marginBottom: 20,
   },
   documentItem: {
@@ -45,17 +45,20 @@ const styles = StyleSheet.create({
   },
   documentTitle: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold',
     marginBottom: 5,
   },
   documentSender: {
     fontSize: 14,
     color: '#666',
+    fontFamily: 'Lato-Regular',
     marginBottom: 3,
   },
   documentDate: {
     fontSize: 14,
     color: '#666',
+    fontFamily: 'Lato-Regular'
+
   },
 });
 

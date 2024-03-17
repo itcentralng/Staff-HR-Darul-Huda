@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold',
     marginBottom: 20,
   },
   input: {
@@ -71,6 +71,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     marginBottom: 20,
+    fontFamily: 'Lato-Regular'
+
   },
   dropdown: {
     height: 40,
@@ -89,7 +91,7 @@ const styles = StyleSheet.create({
   },
   uploadButtonText: {
     color: 'white',
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold'
   },
 });
 

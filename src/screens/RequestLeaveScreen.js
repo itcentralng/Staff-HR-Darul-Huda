@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginBottom: 20,
+    fontFamily: 'Lato-Bold'
   },
   input: {
     height: 40,
@@ -64,7 +65,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingTop: 10,
     textAlignVertical: "top" ,
-    borderRadius: 8
+    borderRadius: 8,
+    fontFamily: 'Lato-Regular'
   },
   attach: {
     marginTop: 20

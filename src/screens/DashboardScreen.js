@@ -59,21 +59,25 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     paddingVertical: 20,
     paddingHorizontal: 15,
+    paddingTop: 30
   },
   heading: {
     fontSize: 24,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
+    fontFamily: 'Lato-Bold'
   },
   welcomeName: {
     fontSize: 14,
     marginBottom: 20,
+    fontFamily: 'Lato-Regular'
+
   },
   section: {
     marginBottom: 20,
   },
   sectionTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold',
     marginBottom: 10,
   },
   item: {
@@ -84,12 +88,14 @@ const styles = StyleSheet.create({
   },
   itemText: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold',
     marginBottom: 5,
   },
   itemDate: {
     fontSize: 14,
     color: '#666',
+    fontFamily: 'Lato-Regular'
+
   },
 });
 

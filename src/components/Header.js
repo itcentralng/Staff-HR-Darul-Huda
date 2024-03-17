@@ -17,12 +17,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold',
     color: "navy"
   },
   titleSlogan: {
     fontSize: 18,
-    color: "black"
+    color: "black",
+    fontFamily: 'Lato-Regular'
   },
 });
 

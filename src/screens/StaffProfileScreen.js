@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold',
     marginBottom: 20,
   },
   infoContainer: {
@@ -79,12 +79,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   label: {
-    fontWeight: 'bold',
+    fontFamily: 'Lato-Bold',
     marginRight: 10,
     width: 100,
   },
   text: {
     flex: 1,
+    fontFamily: 'Lato-Regular'
+
   },
 });
 

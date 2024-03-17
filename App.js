@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import * as Font from 'expo-font';
 import LoginScreen from './src/screens/LoginScreen';
 import DashboardScreen from './src/screens/DashboardScreen';
 import ReceiveDocumentsScreen from './src/screens/ReceiveDocumentsScreen';
@@ -15,6 +16,17 @@ import StaffProfileScreen from './src/screens/StaffProfileScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+
+// Define the custom font mapping
+const customFonts = {
+  'Lato-Regular': require('./assets/fonts/Lato/Lato-Regular.ttf'),
+  'Lato-Bold': require('./assets/fonts/Lato/Lato-Bold.ttf'),
+  // Add other font variants if needed
+};
+
+const LoadFonts = async () => {
+  await Font.loadAsync(customFonts);
+};
 
 const LeaveManagementStack = () => (
   <Stack.Navigator headerMode="none">
@@ -62,6 +74,10 @@ const MainTabNavigator = () => (
 );
 
 const App = () => {
+  useEffect(() => {
+    LoadFonts();
+  }, []);
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login" headerMode="none">
