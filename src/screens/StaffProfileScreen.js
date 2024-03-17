@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Image, Button, StyleSheet } from 'react-native';
+import LogoutButton from '../components/LogoutButton';
 
-const StaffProfileScreen = () => {
+const StaffProfileScreen = ({ navigation }) => {
   const [profilePicture, setProfilePicture] = useState(null)
   const [staffInfo, setStaffInfo] = useState({
     name: '',
@@ -32,6 +33,10 @@ const StaffProfileScreen = () => {
 
   };
 
+  handleLogout = () => {
+    navigation.navigate('Login')
+  }
+
   return (
     <View style={styles.container}>
       <Image source={{ uri: profilePicture }} style={styles.profilePicture} />
@@ -58,6 +63,8 @@ const StaffProfileScreen = () => {
       </View>
       
       <Button title="Edit Profile" onPress={handleProfileUpdate} />
+      <LogoutButton onPress={handleLogout} />
+
     </View>
   );
 };
