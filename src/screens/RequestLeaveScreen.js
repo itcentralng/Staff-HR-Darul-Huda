@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons'; // Import FontAwesome5 icon
 
 const RequestLeaveScreen = () => {
   const [leaveType, setLeaveType] = useState('');
@@ -7,7 +8,9 @@ const RequestLeaveScreen = () => {
   const [endDate, setEndDate] = useState('');
   const [reason, setReason] = useState('');
   const [attachment, setAttachment] = useState(null); 
+
   const handleRequestLeave = () => {
+    // Handle leave request
   };
 
   return (
@@ -38,8 +41,17 @@ const RequestLeaveScreen = () => {
         onChangeText={setReason}
         multiline={true}
       />
-      <Button title="Attach File" onPress={() => {}} />
-      <Button title="Submit Request" onPress={handleRequestLeave} style={styles.attach} />
+      <Button
+        title="Attach File"
+        onPress={() => {}}
+        icon={<FontAwesome5 name="paperclip" size={20} color="black" />} // Attach icon
+        buttonStyle={styles.attachButton} // Apply button style
+      />
+      <Button
+        title="Submit Request"
+        onPress={handleRequestLeave}
+        style={styles.attach}
+      />
     </View>
   );
 };
@@ -54,7 +66,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginBottom: 20,
-    fontFamily: 'Lato-Bold'
+    fontFamily: 'Lato-Bold',
   },
   input: {
     height: 40,
@@ -66,11 +78,14 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     textAlignVertical: "top" ,
     borderRadius: 8,
-    fontFamily: 'Lato-Regular'
+    fontFamily: 'Lato-Regular',
   },
-  attach: {
-    marginTop: 20
-  }
+  attachButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+    fontFamily: 'Lato-Regular',
+  },
 });
 
 export default RequestLeaveScreen;
